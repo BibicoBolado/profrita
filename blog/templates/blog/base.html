@@ -1,0 +1,100 @@
+{%load staticfiles%}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+
+    <link rel="shortcut icon" type="image/png" href="{% static 'img/gota.png' %}"/>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+
+  </head>
+
+
+  <body>
+    <script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId            : 'your-app-id',
+      autoLogAppEvents : true,
+      xfbml            : true,
+      version          : 'v3.0'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v3.0';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<!--Trech acima importa o codigo para linkar com o FB-->
+
+
+
+      <div class="header">
+        <img src="http://www.placepuppy.net/1200/250" style="width: 100%">
+      </div>
+
+      <div class="col-sm-12 menu">
+
+        <li><a class="active" href="{% url 'blog:index' %}">Professora Rita Romão</a></li>
+        <li><a href="{% url 'blog:home' %}">Sobre</a></li>
+        <li><a href="{% url 'blog:contato' %}">Contato</a></li>
+      </div>
+
+
+            {% block content %}
+            {% endblock %}
+
+
+
+
+  <div class="footer">
+    <div class="column">
+      <img src="{% static 'img/bandeira-mage.png' %}" style="width: 80%; padding-bottom: 15px; ">
+
+    </div>
+    <div class="column" >
+
+        <p><strong>Noticias Sobre a Cidade</p>
+        <p>Espaço para Denuncias</p>
+        <p>Panoramas Políticos</p>
+        <p>Informações sobre Eventos</p>
+        <p>Curiosidades em Geral</strong></p>
+
+
+
+    </div>
+    <div class="column footer-text">
+       <div class="fb-like" data-href="https://www.facebook.com/RitaRomaoMage/?view_public_for=105277673206376" data-layout="box_count" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
+
+    </div>
+  </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.<div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+  </body>
+
+
+</html>

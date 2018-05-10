@@ -1,0 +1,19 @@
+{% extends 'blog/base.html' %}
+{%load staticfiles%}
+
+{% block content %}
+<head><title>{{post.title}}</title></head>
+<body>
+<div class="content">
+
+    <h1 style="text-align: center;">{{post.title}}</h1>
+    {% if post.capa %}
+        <img img src="{{post.capa.url}}" alt="{{post.title}}" style="width: 100%; padding: 40px;">
+    {% else %}
+        <img img src="{% static 'img/padrao.jpg' %}"style="width: 100%; padding: 40px;">
+    {% endif %}
+    <hr/>
+    <p style="padding: 40px;padding-top: 0px; text-align: center;">{{post.text}}</p>
+</div>
+</body>
+{% endblock %}
