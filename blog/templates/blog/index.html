@@ -10,7 +10,11 @@
             <a href="{% url 'blog:post' post.slug %}"><img class = "imagem"src="{{post.image.url}}" alt="{{post.title}}" style="border-radius: 40px 40px 5px 5px"></a>
             <hr/>
             <div class="title">
-                <a href="{% url 'blog:post' post.slug %}"> {{post.title}} | {{post.autor}}</a>
+                <a href="{% url 'blog:post' post.slug %}"> {{post.title}}</a>
+                <br>
+                <a href="{% url 'blog:post' post.slug %}"> Escrito Por: {{post.autor}}</a>
+                <br>
+                <a href="{% url 'blog:post' post.slug %}"> Acessos: {{post.numReads}}</a>
             </div>
           </div>
         {% endfor %}

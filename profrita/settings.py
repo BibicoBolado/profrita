@@ -137,6 +137,7 @@ MEDIA_URL='/media/'
 DEFAULT_FROM_EMAIL  = 'rodrigao1993@gmail.com'
 EMAIL_USE_TLS       = True
 EMAIL_HOST          = '64.233.184.108'
+#essa porra de cima me deu maior dor de cabeça!!!
 EMAIL_HOST_USER     = 'rodrigao1993@gmail.com'
 EMAIL_HOST_PASSWORD = 'ar2317211993'
 EMAIL_PORT          = 587

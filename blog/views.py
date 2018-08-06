@@ -17,6 +17,8 @@ def index(request):
     ###########Paginação############
     paginator=Paginator(postagens,6)
     page = request.GET.get('page')
+    print(page)
+    print(dir(paginator))
     posts = paginator.get_page(page)
     ################################
     context={}
@@ -30,6 +32,8 @@ def home(request):
 
 def post(request,slug):
     post=get_object_or_404(Post,slug=slug)
+    print(post.numReads)
+    post.addNumRead()
     time_read=post.time_read()
     print("%f: %s" %(time_read,"minutos"))
     print(post.query_posts())
