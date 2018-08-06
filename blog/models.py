@@ -19,6 +19,14 @@ class Post(models.Model):
     text=models.TextField()
     created_date = models.DateTimeField(
             default=timezone.now)
+    
+    def time_read(self):
+        t_read=round(len(self.text.split(" "))/133)
+        return t_read
+    
+    def query_posts(self):
+        return Post.objects.order_by('-created_date').all()
 
     def __str__(self):
         return self.title
+    

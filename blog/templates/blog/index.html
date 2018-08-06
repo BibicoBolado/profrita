@@ -6,10 +6,12 @@
 <div class="content">
     <div class="row">
         {% for post in posts %}
-          <div class="column">
+          <div id = post{{post.id}} class="column">
             <a href="{% url 'blog:post' post.slug %}"><img class = "imagem"src="{{post.image.url}}" alt="{{post.title}}" style="border-radius: 40px 40px 5px 5px"></a>
             <hr/>
-            <div class="title"><a href="{% url 'blog:post' post.slug %}"> {{post.title}} | {{post.autor}}</a></div>
+            <div class="title">
+                <a href="{% url 'blog:post' post.slug %}"> {{post.title}} | {{post.autor}}</a>
+            </div>
           </div>
         {% endfor %}
     </div>

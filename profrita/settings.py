@@ -124,9 +124,21 @@ STATIC_ROOT= os.path.join(BASE_DIR, 'static')
 
 
 #arquivos de MEDIA são arquivos de modelos
-#Media Root é onde os arquivos vão ficar
-#O upload_to do model fica concatenado com o Media_Root
+#Media Root é onde os arquivos   vão ficar
+#O upload_to do model     fica concatenado 
+#com o Media_Root
 #URL_MEDIA é a url base para os arquivos de media (upload usuario)
 MEDIA_ROOT=os.path.join(BASE_DIR,'media')
-
 MEDIA_URL='/media/'
+
+#EMAIL
+#EMAIL_BACKEND       = 'django.core.mail.backends.console.EmailBackend'
+#EMAIL_BACKEND       = 'django.core.mail.backends.smtp.EmailBackend'
+DEFAULT_FROM_EMAIL  = 'rodrigao1993@gmail.com'
+EMAIL_USE_TLS       = True
+EMAIL_HOST          = '64.233.184.108'
+EMAIL_HOST_USER     = 'rodrigao1993@gmail.com'
+EMAIL_HOST_PASSWORD = 'ar2317211993'
+EMAIL_PORT          = 587
+
+CONTACT_EMAIL       = 'rodrigosiqueira@id.uff.br'
