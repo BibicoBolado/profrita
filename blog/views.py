@@ -17,6 +17,7 @@ def index(request):
     ###########Paginação############
     paginator=Paginator(postagens,6)
     page = request.GET.get('page')
+    
     posts = paginator.get_page(page)
     ################################
     context={}

@@ -112,8 +112,13 @@ li a:hover:not(.active) {
 
 
 @media screen and (max-width:500px) {
+    .text{
+        padding: 2px;
+    }
     .column {
         width: 100%;
+        padding: 0px;
+        margin-bottom: 20px;
     }
     .text-home {
         width: 100%;
